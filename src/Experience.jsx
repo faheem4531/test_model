@@ -21,7 +21,7 @@ export default function Experience() {
 
         <mesh castShadow position={[3, -1, -3]}>
             <torusGeometry />
-            <meshStandardMaterial color="mediumpurple" />
+            <meshStandardMaterial wireframe color="mediumpurple" />
         </mesh>
 
         <primitive object={hamburder.scene} scale={0.3} />
