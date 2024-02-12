@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+html,
+body,
+#root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: var(--bg-primary-lite); */
+}
+
+
+:root {
+
+    --text-main: #fff;
+    --text-primary: #A7A4AD;
+    --text-lite-1: #6E6E6B;
+
+    --bg-primary: #000;
+    --bg-primary-lite: rgba(0, 0, 0, 0.50);
+    --bg-lite: #151515;
+    --bg-lite-1: rgba(167, 164, 173, 0.20);
+    --bg-lite-2: #0A0A0A;
+    --bg-lite-3: #202020;
+    --bg-lite-4: #222;
+    --bg-lite-5: rgba(150, 146, 151, 0.18);
+    --bg-lite-6: rgba(21, 21, 21, 0.60);
+    --bg-transparent: rgba(32, 32, 32, 0.25);
+}
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+
+body {
+    background-color: #000000;
+    color: #A7A4AD;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+    margin-right: 25px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    left: 90px;
+    bottom: 120px;
+    color: #A7A4AD;
+    font-weight: 300;
+    user-select: none;
+}
+
+.dextopText {
+    width: 50%;
+    font-size: 20px;
+    line-height: 120%;
+    margin: 25px 0;
+}
+
+.button {
+    background-color: var(--bg-lite-1);
+    color: var(--text-main);
+    border-radius: 4px;
+    padding: 5px 20px;
+    font-size: 11px;
+    border: none;
+    margin: 0px;
+
+}
