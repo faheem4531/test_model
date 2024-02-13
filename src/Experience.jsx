@@ -1,8 +1,10 @@
 import { Center, OrbitControls, Text3D, useGLTF } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
+import { useRef } from 'react'
 
 export default function Experience() {
-    const hamburder = useGLTF('./hamburger.glb')
+    const socksLow = useGLTF('./socksLow.glb')
+    const model = useRef()
 
     return <>
 
@@ -24,7 +26,7 @@ export default function Experience() {
             <meshStandardMaterial wireframe color="mediumpurple" />
         </mesh>
 
-        <primitive object={hamburder.scene} scale={0.3} />
+        <primitive object={socksLow.scene} scale={0.12} position={[0, -1, 1]} />
 
         {/* <Text3D>
             Mobius
