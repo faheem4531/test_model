@@ -37,6 +37,25 @@ export default function Experience() {
         }
     })
 
+    const { position, scale, rotation } = useControls('Model Controls', {
+        position: {
+            value: { x: 3, y: -0.5, z: 1 },
+            step: 0.1,
+            joystick: 'invertY'
+        },
+        scale: {
+            value: 0.1,
+            step: 0.01,
+            min: 0,
+            max: 5
+        },
+        rotation: {
+            value: { x: 0, y: -0.2, z: 0 },
+            step: 0.1,
+            joystick: 'invertY'
+        }
+    })
+
     return <>
 
 
@@ -46,13 +65,23 @@ export default function Experience() {
         <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
         <ambientLight intensity={0.5} />
 
-        <mesh ref={torus} castShadow position={[positionT.x, positionT.y, positionT.z]} rotation={[rotationT.x, rotationT.y, rotationT.z]} scale={scaleT} visible={visible}>
+        <mesh
+            ref={torus}
+            castShadow
+            position={[positionT.x, positionT.y, positionT.z]}
+            rotation={[rotationT.x, rotationT.y, rotationT.z]}
+            scale={scaleT}
+            visible={visible}
+        >
             <torusGeometry />
             <meshStandardMaterial wireframe={wireframe} color={colorT} />
         </mesh>
 
-        <primitive object={socksLow.scene} scale={0.1} position={[3, -0.5, 1]} rotation-y={-0.2} />
-
-
+        <primitive
+            object={socksLow.scene}
+            scale={scale}
+            position={[position.x, position.y, position.z]}
+            rotation={[rotation.x, rotation.y, rotation.z]}
+        />
     </>
 }
