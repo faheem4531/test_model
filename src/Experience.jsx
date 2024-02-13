@@ -47,7 +47,7 @@ export default function Experience() {
             value: 0.1,
             step: 0.01,
             min: 0,
-            max: 5
+            max: 1
         },
         rotation: {
             value: { x: 0, y: -0.2, z: 0 },
